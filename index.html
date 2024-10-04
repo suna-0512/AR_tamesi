@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+			<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+			<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+			<script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+			<script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+		</head>
+
+	<body style="margin: 0; overflow: hidden;">
+
+
+		<!-- こっからA-Frame -->
+		<a-scene
+			vr-mode-ui="enabled: false;"
+			loading-screen="enabled: false;"
+			arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+			id="scene"
+			embedded
+			gesture-detector
+		>
+		<a-assets>
+			<a-asset-item id="animated-asset" src="assets/Abeja 1.glb"></a-asset-item>
+		</a-assets>
+
+			<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
+			<a-marker
+				id="animated-marker"
+				type="pattern"
+				preset="custom"
+				url="assets/marker.patt"
+				raycaster="objects: .clickable"
+				emitevents="true"
+				cursor="fuse: false; rayOrigin: mouse;"
+				id="markerA"
+			>
+				<a-image
+					src="assets\frame1.png"
+					scale="4 6 0"
+					class="clickable"
+					rotation="-90 0 0"
+					gesture-handler
+					position="0 0 -2"
+				></a-image>
+				<a-entity
+					id="bowser-model"
+					scale="5 5 5"
+					animation-mixer="loop: repeat"
+					gltf-model="#animated-asset"
+					class="clickable"
+					position="0 0 -1"
+					gesture-handler
+					rotation="-90 0 0"
+				></a-entity>
+			</a-marker>
+			
+			<a-entity camera></a-entity>
+
+		</a-scene>	
+	</body>
+</html>
