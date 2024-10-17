@@ -20,7 +20,7 @@
 			gesture-detector
 		>
 		<a-assets>
-			<a-asset-item id="animated-asset" src="assets/Tea-pot_glb.glb"></a-asset-item>
+			<a-asset-item id="animated-asset" src="assets/ImageToStl.com_kokubann.big.glb"></a-asset-item>
 		</a-assets>
 
 			<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
@@ -34,6 +34,7 @@
 				cursor="fuse: false; rayOrigin: mouse;"
 				id="markerA"
 			>
+				<!--
 				<a-image
 					src="assets\frame1.png"
 					scale="4 6 0"
@@ -42,16 +43,25 @@
 					gesture-handler
 					position="0 0 0"
 				></a-image>
+				<a-image
+					src="assets\pet_cat_sit.png"
+					scale="4 6"
+					class="clickable"
+					rotation="-90 0"
+					gesture-handler
+					position="0 0 0"
+				></a-image>
+				-->
 				
 				<a-entity
 					id="bowser-model"
-					scale="5 5 5"
+					scale="1 1 1"   
 					animation-mixer="loop: repeat"
 					gltf-model="#animated-asset"
 					class="clickable"
-					position="0 0 -1"
+					position="0 0 0"
 					gesture-handler
-					rotation="-90 0 0"
+					rotation="0 0"
 				></a-entity>
 			</a-marker>
 			
