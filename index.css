@@ -1,0 +1,29 @@
+body{
+	display: flex;
+}
+
+.camera{
+	z-index: 100;
+}
+
+#button{
+	width: 300px;
+	height: 300px;
+	border-radius: 1000px;
+	font-size: 80px;
+	position: absolute;
+	top: 80%;
+	right: 45%;
+
+	&:active{
+		background-color: red;
+		width: 280px;
+		height: 280px;
+	}
+}
+
+#image{
+	position: absolute;
+	top: 80%;
+	right: 5%;
+}
