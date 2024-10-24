@@ -7,18 +7,21 @@ body{
 }
 
 #button{
-	width: 300px;
-	height: 300px;
+	width: 10vw;
+	aspect-ratio: 1/1;
 	border-radius: 1000px;
-	font-size: 80px;
+	border: none;
+	border: solid 1vw rgb(249, 238, 238);
+	background-color: red;
+	font-size: 40px;
 	position: absolute;
-	top: 80%;
-	right: 45%;
+	top: 70vh;
+	right: 5vw;
+	
 
 	&:active{
 		background-color: red;
-		width: 280px;
-		height: 280px;
+		transform: scale(0.9);
 	}
 }
 
