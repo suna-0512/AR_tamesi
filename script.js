@@ -32,8 +32,16 @@ async function main () {
       const context = canvas.getContext('2d')
       context.drawImage(video, 0, 0, width, height) // <7>
 
-      const dataUrl = canvas.toDataURL('image/jpeg') // <8>
+      const dataUrl = canvas.toDataURL('image/jpg') // <8>
       image.setAttribute('src', dataUrl) // <9>
+
+
+			//データの保存
+			const a = document.createElement("a");// a要素の作成
+			a.href = dataUrl // href属性のセット
+			a.download = "image.jpg";// ファイル名のセット
+			a.click();// 疑似的にクリック
+
     })
 
   } catch (err) {
