@@ -7,11 +7,17 @@ async function main () {
     const image = document.querySelector('#image')
 		const camera_btn = document.querySelector('#take-photo');
 
+		//画面サイズを取得
+		var width = window.screen.width; // 画面の横幅
+		var height = window.screen.height; // 画面の高さ
+
 		//ここでユーザーのデバイスカメラからの情報を取得
     const stream = await navigator.mediaDevices.getUserMedia({ // <2>
       video: {  //取得する動画の詳細指定
         //facingMode: 'user',   //内カメ?
         facingMode: 'environment',  //外カメ?
+				width: width,
+      	height: height, 
       },
       audio: false,  //音声はfalse:取得しない
     })
@@ -22,7 +28,7 @@ async function main () {
 		//動画のサイズを取得
     const [track] = stream.getVideoTracks()
     const settings = track.getSettings()
-    const {width, height} = settings // <4>
+    //const {width, height} = settings // <4>
 
 
 		//撮影ボタンが押されたときの処理
