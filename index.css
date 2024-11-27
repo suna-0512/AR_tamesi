@@ -25,17 +25,19 @@ body{
 	}
 }
 
+#video{
+	border: #ff0000 2px solid;
+	visibility: hidden;
+}
 #image{
+	height: 10%;
 	position: absolute;
-	top: 80%;
-	right: 5%;
+	right: 0;
+	bottom: 0;
+	margin: 10px;
+	border: white 2px solid;
+	border-radius: 5%;
 }
-
-#arjs-video{
-}
-
-
-
 
 .ui {
 	position: absolute;
