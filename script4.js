@@ -32,14 +32,14 @@ async function main () {
       const canvas = document.createElement('canvas') // <6>
 
 			//canvasの大きさを設定
-      canvas.setAttribute('width', "600px")	//id=canvasの要素の、widthという属性をwidth(27行目で定義した変数)に指定する
-      canvas.setAttribute('height', "300px")
+      canvas.setAttribute('width', width)	//id=canvasの要素の、widthという属性をwidth(27行目で定義した変数)に指定する
+      canvas.setAttribute('height', height)
 
 			//2Dグラフィックを描画するためのメソッドやプロパティをもつオブジェクトを取得。
       const context = canvas.getContext('2d')
 
 			//キャンバス上にvideoを描画
-      context.drawImage(video, 0, 0, 600, 300) // <7>
+      context.drawImage(video, 0, 0, width, height) // <7>
 
 			//canvas上に描画された画像をURLに
       const dataUrl = canvas.toDataURL('image/png') // <8>
