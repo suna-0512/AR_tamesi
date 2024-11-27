@@ -1,30 +1,3 @@
-body{
-	display: flex;
-}
-
-.camera{
-	z-index: 100;
-}
-
-#button{
-	width: 10vw;
-	aspect-ratio: 1/1;
-	border-radius: 1000px;
-	border: none;
-	border: solid 1vw rgb(249, 238, 238);
-	background-color: red;
-	font-size: 40px;
-	position: absolute;
-	top: 70vh;
-	right: 5vw;
-	
-
-	&:active{
-		background-color: red;
-		transform: scale(0.9);
-	}
-}
-
 #video{
 	border: #ff0000 2px solid;
 	visibility: hidden;
