@@ -1,6 +1,17 @@
+body{
+	display: flex;
+}
+
+a-scene{
+	border: #303030 2px solid;
+	background-color: aqua;
+}
+
 #video{
 	border: #ff0000 2px solid;
 	visibility: hidden;
+	background-color: #ff0000;
+	position: absolute;
 }
 #image{
 	height: 10%;
