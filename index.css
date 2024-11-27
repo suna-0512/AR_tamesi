@@ -4,7 +4,7 @@ body{
 
 a-scene{
 	border: #303030 2px solid;
-	background-color: aqua;
+	z-index: 1;
 }
 
 #video{
