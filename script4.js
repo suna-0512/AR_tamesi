@@ -17,7 +17,6 @@ async function main () {
         //facingMode: 'user',   //内カメ?
         facingMode: 'environment',  //外カメ?
 				height: h,
-				aspectRatio: w/h,
       },
       audio: false,  //音声はfalse:取得しない
     })
