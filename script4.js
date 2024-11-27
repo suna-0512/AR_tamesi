@@ -32,8 +32,8 @@ async function main () {
       const canvas = document.createElement('canvas') // <6>
 
 			//canvasの大きさを設定
-      canvas.setAttribute('width', width)	//id=canvasの要素の、widthという属性をwidth(27行目で定義した変数)に指定する
-      canvas.setAttribute('height', height)
+      canvas.setAttribute('width', 300)	//id=canvasの要素の、widthという属性をwidth(27行目で定義した変数)に指定する
+      canvas.setAttribute('height', 500)
 
 			//2Dグラフィックを描画するためのメソッドやプロパティをもつオブジェクトを取得。
       const context = canvas.getContext('2d')
@@ -49,6 +49,8 @@ async function main () {
 
 			//確認
 			console.log(dataUrl)
+			console.log(canvas.width)
+			console.log(canvas.height)
 
 
 
