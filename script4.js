@@ -5,7 +5,7 @@ async function main () {
 		//HTMLから要素を取得
     const video = document.querySelector('#video') // <1>
     const image = document.querySelector('#image')
-		const camera_btn = document.querySelector('#button');
+		const camera_btn = document.querySelector('#take-photo');
 
 		//ここでユーザーのデバイスカメラからの情報を取得
     const stream = await navigator.mediaDevices.getUserMedia({ // <2>
