@@ -11,8 +11,8 @@ async function main () {
     const stream = await navigator.mediaDevices.getUserMedia({ // <2>
 			//取得する動画の詳細指定
       video: {  
-        //facingMode: 'user',   //内カメ?
-        facingMode: 'environment',  //外カメ?
+        facingMode: 'user',   //内カメ?
+        //facingMode: 'environment',  //外カメ?
       },
 
 			//音声はfalse:取得しない
