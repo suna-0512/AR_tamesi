@@ -16,7 +16,6 @@ async function main () {
       video: {  //取得する動画の詳細指定
         //facingMode: 'user',   //内カメ?
         facingMode: 'environment',  //外カメ?
-				height: h,
       },
       audio: false,  //音声はfalse:取得しない
     })
