@@ -5,18 +5,16 @@ async function main () {
 		//HTMLから要素を取得
     const video = document.querySelector('#video') // <1>
     const image = document.querySelector('#image')
-		const cameraBtn = document.querySelector('#cameraButton');
+		const camera_btn = document.querySelector('#cameraButton');
 
 		//ここでユーザーのデバイスカメラからの情報を取得
     const stream = await navigator.mediaDevices.getUserMedia({ // <2>
 			//取得する動画の詳細指定
       video: {  
-        facingMode: 'user',   //内カメ?
-        //facingMode: 'environment',  //外カメ?
+        //facingMode: 'user',   //内カメ?
+        facingMode: 'environment',  //外カメ?
       },
-
-			//音声はfalse:取得しない
-      audio: false,  
+      audio: false,  //音声はfalse:取得しない
     })
 
 		//取得した動画をHTML内のvideo要素のsrc=""属性に代入する
@@ -29,7 +27,7 @@ async function main () {
 
 
 		//撮影ボタンが押されたときの処理
-    cameraBtn.addEventListener('click', event => { // <5>
+    camera_btn.addEventListener('click', event => { // <5>
 
 			//canvas要素を取得
       const canvas = document.createElement('canvas') // <6>
