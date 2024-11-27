@@ -20,7 +20,7 @@ async function main () {
     })
 
 		//取得した動画をHTML内のvideo要素のsrc=""属性に代入する
-    video.srcObject = stream // <3>	
+    //video.srcObject = stream // <3>	
 
 		//動画のサイズを取得
     const [track] = stream.getVideoTracks()
@@ -48,7 +48,7 @@ async function main () {
       const dataUrl = canvas.toDataURL('image/png') // <8>
 
 			//撮った写真を画面上の<img>に表示させる
-      image.setAttribute('src', dataUrl) // <9>
+      //image.setAttribute('src', dataUrl) // <9>
 
 			//確認
 			console.log(dataUrl)
