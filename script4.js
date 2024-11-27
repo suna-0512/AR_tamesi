@@ -5,14 +5,13 @@ async function main () {
 		//HTMLから要素を取得
     const video = document.querySelector('#video') // <1>
     const image = document.querySelector('#image')
-		const camera_btn = document.querySelector('#cameraButton');
+		const camera_btn = document.querySelector('#button');
 
 		//ここでユーザーのデバイスカメラからの情報を取得
     const stream = await navigator.mediaDevices.getUserMedia({ // <2>
-			//取得する動画の詳細指定
-      video: {  
-        //facingMode: 'user',   //内カメ?
-        facingMode: 'environment',  //外カメ?
+      video: {  //取得する動画の詳細指定
+        facingMode: 'user',   //内カメ?
+        //facingMode: 'environment',  //外カメ?
       },
       audio: false,  //音声はfalse:取得しない
     })
@@ -37,10 +36,10 @@ async function main () {
       canvas.setAttribute('height', height)
 
 			//2Dグラフィックを描画するためのメソッドやプロパティをもつオブジェクトを取得。
-      const canv = canvas.getContext('2d')
+      const context = canvas.getContext('2d')
 
 			//キャンバス上にvideoを描画
-      canv.drawImage(video, 0, 0, width, height) // <7>
+      context.drawImage(video, 0, 0, width, height) // <7>
 
 			//canvas上に描画された画像をURLに
       const dataUrl = canvas.toDataURL('image/png') // <8>
